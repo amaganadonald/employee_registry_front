@@ -1,0 +1,28 @@
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon><img src="logo_white.svg" alt="logo"></mat-icon>
+    </button>
+    <span>Employee Management System</span>
+    <span class="example-spacer"></span>
+    <button mat-button routerLink="/dashboard">Dashboard</button>
+    
+    <button mat-button [matMenuTriggerFor]="belowMenu">Employees</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+      <button mat-menu-item>List</button>
+      <button mat-menu-item>Managers</button>
+    </mat-menu>
+    
+    <button mat-button [matMenuTriggerFor]="beforeMenu">Settings</button>
+    <mat-menu #beforeMenu="matMenu" xPosition="before">
+      <button mat-menu-item>Department</button>
+      <button mat-menu-item>Address</button>
+      <button mat-menu-item><a mat-button routerLink="/grades">Grades</a></button>
+    </mat-menu>
+    
+    
+    <button mat-button [matMenuTriggerFor]="afterMenu">Admin</button>
+    <mat-menu #afterMenu="matMenu" xPosition="after">
+      <button mat-menu-item>Account</button>
+      <button mat-menu-item>Deconnexion</button>
+    </mat-menu>
+  </mat-toolbar>
